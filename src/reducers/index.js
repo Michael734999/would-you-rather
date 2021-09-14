@@ -6,7 +6,7 @@ import users from './users'
 
 export default combineReducers({
     login,
-    questions,
     users,
+    questions,
     loadingBar: loadingBarReducer,
 })

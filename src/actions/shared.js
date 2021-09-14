@@ -1,6 +1,5 @@
 import { showLoading, hideLoading } from 'react-redux-loading'
-import { getInitialData } from '../utils/api'
-import { saveQuestion, answerQuestion } from '../utils/api'
+import { saveQuestion, answerQuestion, getInitialData } from '../utils/api'
 import { toggleLogin, logOut } from './login' 
 import { getQuestions, addQuestion, saveQuestionAnswer } from './questions'
 import { getUsers, saveQ, saveAnswer} from './users'
@@ -34,11 +33,11 @@ export function handleAnswerQuestion(authedUser, qid, answer){
     }
 }
 
-export function handleAddNewQuestion(optionOne, optionTwo) {
+export function handleAddNewQuestion(optionOneText, optionTwoText) {
     return(dispatch, getState) => {
         const { login } = getState()
         dispatch(showLoading())
-        return saveQuestion(optionOne, optionTwo, login)
+        return saveQuestion(optionOneText, optionTwoText, login)
         .then((question => {
             dispatch(addQuestion(question))
             dispatch(saveQ(question))
