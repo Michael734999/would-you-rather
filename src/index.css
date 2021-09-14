@@ -1,9 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
+body {
+    background-color: rgb(247, 244, 244);
+    font-family: 'Roboto', sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+.nav {
+    position: fixed;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding: 1.4em;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1.4em;
+}
+
+.nav a:hover {
+    background-color: #84c765;
+}
+
+.active {
+   border-bottom: solid 2px #84c765;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-start;
+    letter-spacing: 1px;
+    list-style: none;
+}
+
+.nav li {
+    padding-left: 12px;
+    padding-right: 25px;
+}
+
+#logout {
+    padding-left: .1em;
+}
+
+.nav-text {
+    font-size: 0.7em;
+}
+
+.img-nav{
+  margin-top: -.3em;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+  margin-left: 1em;
+
+  border-radius: 50%;
+}
+
+/* The Dashboard view  */
+
+.dashboard{
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.5px solid black;
+  box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+  text-align: center;
+  display: flex;
+  width: auto;
+  z-index: -1;
+}
+
+.tabs{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  background-color: #84c765;
+  border-radius: none;
+  border-bottom: 0.5px solid black;
+  box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+}
+
+.tab {
+  font-size:1.7em;
+  cursor: pointer;
+  padding-top:10px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom: 10px;
+}
+
+.tab:hover{
+  color:rgb(247, 244, 244);
+}
+
+.questions {
+    position: relative;
+    margin: 1.2em;
+    width:auto;
+    border: 0.5px solid black;
+    box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+    height:auto;
+    border-radius: 8px;
+}
+
+.userInfo{
+  background-color: #84c765;
+  border-bottom: 0.5px solid black;
+}
+
+.userImg{
+  width: 5em;
+  height: 5em;
+  border: 0.5px solid black;
+  box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+  margin-top: 1em;
+  border-radius: 50%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.tab-active{
+  color: #fff;
+}
+/* The login view */
+.login {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    border: 0.5px solid black;
+    width: 60%;
+    border-radius: 2px;
+    background-color: rgba(245, 245, 245, 0.651);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-top{
+    min-height: 8vh;
+    width: 100%;
+    background-color: #84c765c5;
+    padding: 2em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-form {
+    padding: 1em;
+}
+
+/* Create the button */
+
+.btn {
+    outline: none;
+    text-decoration: none;
+    margin: 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 3.5em;
+    width: 15em;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover {
+    animation: btnrotate 0.7s ease-in-out both;
+}
+
+.btn:hover .btn-detail {
+  animation: btn-move 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes btnrotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+      25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+      }
+      50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+      }
+      75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+      }
+      100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+      }
+    }
+ @keyframes btn-move {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+      }
+      25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+      }
+      50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+      }
+      75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+      }
+      100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+      }
+ }
+
+.btn-detail {
+  color: #000000;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+select{
+    margin: 0.2em;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1.1em;
+}
+
+/* The New Question view */
+
+.newQuestion {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  border: 0.5px solid black;
+  width: 60%;
+  border-radius: 2px;
+  background-color: rgba(245, 245, 245, 0.651);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.newQuestionTop{
+  min-height: 8vh;
+  width: 100%;
+  background-color: #84c765c5;
+  padding: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input {
+  margin: 0.2em;
+  width: 90%;
+  padding: 0.5em;
+  font-size: 1.1em;
+}
+
+.or{
+  text-align:center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 20px 0;
+  grid-gap: 20px; 
+}
+
+.or:after,.or:before {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #84c765c5;
+}
+
+/* The Question view  */
+
+
+/* Heading */
+h1{
+  padding:0.2em;
+}
+
+h3 {
+    padding: 0.5em;
+    font-size: 1.9em;
+    font-family: 'Dancing Script', cursive;
+}
+
+p {
+    padding: 0.2em;
+    font-size: 1.25em;
+}
+
+h4 {
+    padding: 0.3em;
+    text-align: left;
+    font-size: 1.3em;
 }
