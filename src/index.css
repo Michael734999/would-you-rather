@@ -74,6 +74,56 @@ html {
   border-radius: 50%;
 }
 
+/* QuestionId  */
+
+.questionId {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  border: 0.5px solid black;
+  width: 60%;
+  border-radius: 2px;
+  background-color: rgba(245, 245, 245, 0.651);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.radio-label {
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+/* The Leaderboard  */
+
+.leaderboard {
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.5px solid black;
+  box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+  text-align: center;
+  width: 60%;
+  z-index: -1;
+}
+
+.userCard {
+  position: relative;
+    margin: 1.2em;
+    width:auto;
+    border: 0.5px solid black;
+    box-shadow: rgba(62, 62, 133, 0.2) 0px 7px 29px 0px;
+    height:auto;
+    border-radius: 8px;
+}
+
+#leader {
+  font-size: 2.5em;
+}
+
 /* The Dashboard view  */
 
 .dashboard{

@@ -87,7 +87,7 @@ class NewQuestion extends Component {
     }
 }
 
-function mapStateToProps(login) {
+function mapStateToProps({login}) {
     return{
         login,
     }

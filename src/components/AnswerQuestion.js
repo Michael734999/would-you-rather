@@ -27,9 +27,10 @@ class AnswerQuestion extends Component {
         const finalAnswer = question[answer].text
 
         return (
-            <div className="answerQuestion">
-            <div>
+            <div className="questionId">
+            <div className="userInfo">
             <img className="userImg" alt={question.author} src={users[question.author].avatarURL}/>
+            <h3>{users[question.author].name} Asks:</h3>   
             </div>
             <div>
             <h3>Your answer {finalAnswer}</h3>
@@ -48,7 +49,7 @@ class AnswerQuestion extends Component {
     }
 }
 
-function mapStateToProps(questions, users, login) {
+function mapStateToProps({questions, users, login}) {
     return {
         questions,
         users,

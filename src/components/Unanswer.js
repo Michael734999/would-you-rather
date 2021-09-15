@@ -40,26 +40,26 @@ class Unanswer extends Component {
         }
 
         return (
-            <div>
-            <div>
+            <div className='questionId'>
+            <div className='userInfo'>
             <img className='userImg' alt={question.author} src={users[question.author].avatarURL}/>
             <h3>{users[question.author].name} Asks:</h3>    
             </div>
             <div>
             <form onChange={this.optionChange}>
             <h3>Would You Rather...</h3>
-            <label>
+            <label className='radio-label'>
                 {
                     question.optionOne.text
                 }
-                <input type='radio' name='vote' value='optionOne' id='one' onChange={this.handleChange}/>
+                <input className='radio-input' type='radio' name='vote' value='optionOne' id='one' onChange={this.handleChange}/>
             </label>
             <h3>OR</h3>
-            <label>
+            <label className='radio-label'>
                 {
                     question.optionTwo.text
                 }
-                <input type='radio' name='vote' value='optionTwo' id='two' onChange={this.handleChange}/>
+                <input className='radio-input' type='radio' name='vote' value='optionTwo' id='two' onChange={this.handleChange}/>
             </label>
             <button 
             className="btn"
@@ -74,7 +74,7 @@ class Unanswer extends Component {
     }
 }
 
-function mapStateToProps(questions, users, login) {
+function mapStateToProps({questions, users, login}) {
     return {
         questions,
         users,

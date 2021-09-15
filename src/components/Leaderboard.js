@@ -38,20 +38,22 @@ class Leaderboard extends Component {
 
         return(
             <div className="leaderboard">
-            <h3>Leaderboard</h3>
+            <h3 id='leader'>Leaderboard</h3>
             <ul>
             {userPosition.map(user => (
+                <div className="userCard">
                 <li key={user.name}>
-                <div>
+                <div className="userInfo">
                 <img className='userImg' alt={user.name} src={user.avatarURL}/>
                 <h3>{user.name}</h3>
                 </div>
                 <div>
                 <p>Questions asked: {user.questionNum}</p>
                 <p>Questions answered: {user.answerNum}</p>
-                <p>Score: {user.score}</p>
+                <p>Final Score: {user.score}</p>
                 </div>
                 </li>
+                </div>
             ))}
             </ul>
             </div>
@@ -59,7 +61,7 @@ class Leaderboard extends Component {
     }
 }
 
-function mapStateToProps(users, login) {
+function mapStateToProps({users, login}) {
     return{
         users, 
         login
