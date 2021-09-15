@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
+import { logOut } from '../actions/login' 
 
 class Nav extends Component {
     render() {
@@ -42,7 +43,7 @@ class Nav extends Component {
         )
         : null}
         <li id="logout">
-        <NavLink to='/logout' activeClassName='active'>
+        <NavLink to='/logout' activeClassName='active' onClick={() => {this.props.dispatch(logOut())}}>
        Profile
         </NavLink>
         </li>

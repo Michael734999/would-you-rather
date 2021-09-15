@@ -20,7 +20,7 @@ export function handleInitialData() {
     }
 }
 
-export function handleAnswerQuestion(authedUser, qid, answer){
+export function handleAnswerQuestion({authedUser, qid, answer}){
     return(dispatch) => {
 
         dispatch(showLoading())
