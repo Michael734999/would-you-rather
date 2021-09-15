@@ -34,7 +34,7 @@ function mapStateToProps({questions, users, login}, props) {
     if(!login) {
         return (
             <Redirect to={{
-                pathname: '/login'
+                pathname: '/logout'
             }}/>
         )
     }

@@ -36,10 +36,14 @@ class AnswerQuestion extends Component {
             <h3>Your answer {finalAnswer}</h3>
             <p>{question.optionOne.votes.length / combine * 100}% Option One
             <br/>
+            ({question.optionOne.text})
+            <br/>
             Votes:{question.optionOne.votes.length}
             </p>
             
             <p>{question.optionTwo.votes.length / combine * 100}% Option Two
+            <br/>
+            ({question.optionTwo.text})
             <br/>
             Votes:{question.optionTwo.votes.length}
             </p>
