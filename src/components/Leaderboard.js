@@ -41,8 +41,8 @@ class Leaderboard extends Component {
             <h3 id='leader'>Leaderboard</h3>
             <ul>
             {userPosition.map(user => (
-                <div className="userCard">
                 <li key={user.name}>
+                <div className="userCard">
                 <div className="userInfo">
                 <img className='userImg' alt={user.name} src={user.avatarURL}/>
                 <h3>{user.name}</h3>
@@ -52,8 +52,8 @@ class Leaderboard extends Component {
                 <p>Questions answered: {user.answerNum}</p>
                 <p>Final Score: {user.score}</p>
                 </div>
-                </li>
                 </div>
+                </li>
             ))}
             </ul>
             </div>
