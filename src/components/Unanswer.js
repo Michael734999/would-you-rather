@@ -64,7 +64,8 @@ class Unanswer extends Component {
             <button 
             className="btn"
             type="submit"
-            onClick={this.handleSubmit}>
+            onClick={this.handleSubmit}
+            disabled={this.state.poll === ''}>
             Submit
             </button>
             </form>

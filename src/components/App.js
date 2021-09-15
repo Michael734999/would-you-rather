@@ -29,7 +29,7 @@ class App extends Component {
       : <div>
          <Switch>
         <Route exact path='/' component={Dashboard}/>
-        <Route path='/new' component={NewQuestion}/>
+        <Route path='/add' component={NewQuestion}/>
         <Route path='/questions/:id' component={QuestionId}/>
         <Route path='/leaderboard' component={Leaderboard}/>
         <Route path='/logout' component={Login}/>

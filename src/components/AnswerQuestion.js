@@ -26,6 +26,10 @@ class AnswerQuestion extends Component {
         const combine = optionOne.votes.length + optionTwo.votes.length
         const finalAnswer = question[answer].text
 
+        const questionOnePercent = question.optionOne.votes.length / combine * 100
+
+        const questionTwoPercent = question.optionTwo.votes.length / combine * 100
+
         return (
             <div className="questionId">
             <div className="userInfo">
@@ -35,12 +39,12 @@ class AnswerQuestion extends Component {
             <div>
             <h3>Your answer {finalAnswer}</h3>
             <h3>{question.optionOne.text}</h3>
-            <p>{question.optionOne.votes.length / combine * 100}% Option One
+            <p>{questionOnePercent.toFixed(1)}% Option One
             <br/>
             Votes:{question.optionOne.votes.length}
             </p>
             <h3>{question.optionTwo.text}</h3>
-            <p>{question.optionTwo.votes.length / combine * 100}% Option Two            
+            <p>{questionTwoPercent.toFixed(1)}% Option Two            
             <br/>
             Votes:{question.optionTwo.votes.length}
             </p>
