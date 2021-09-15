@@ -6,12 +6,12 @@
 <ul>
 <li>
 Command for installing the dependencies - npm install
-<li>
+</li>
 </ul>
 
 <h2>Launching the project:</h2>
 <ul>
 <li>
 Command for launching the project - npm start
-<li>
+</li>
 </ul>
